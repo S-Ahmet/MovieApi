@@ -3,8 +3,11 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+<<<<<<< Updated upstream
 using MovieApi.Application.Features.MediatorDesignPattern.Commands.CastCommands;
 using MovieApi.Application.Features.MediatorDesignPattern.Queries.CastQueries;
+=======
+>>>>>>> Stashed changes
 
 namespace MovieApi.WebApi.Controllers
 {
