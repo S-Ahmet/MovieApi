@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\MovieApi",
-    "\\MovieApi\\Presentation",
-    "\\MovieApi\\Presentation\\MovieApi.WebApi"
+    "\\MovieApi\\Core",
+    "\\MovieApi\\Core\\MoviApi.Domain"
   ],
-  "SelectedNode": "\\MovieApi\\Presentation\\MovieApi.WebApi\\Program.cs",
+  "SelectedNode": "\\MovieApi\\MovieApi.WebUI",
   "PreviewInSolutionExplorer": false
 }
