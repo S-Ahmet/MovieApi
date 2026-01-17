@@ -1,0 +1,146 @@
+﻿@model MovieApi.Dto.Dtos.MovieDtos.ResultMovieDetailsDto
+
+<style>
+    .custom-media-btn{
+        background:#e50846;
+        color:#fff;
+        font-weight:bold;
+        border:none;
+        padding:8px 16px;
+        border-radius:25px;
+        transition:.3s;
+        display:inline-flex;
+        align-items:center;
+        gap:6px;
+        text-decoration:none;
+        font-size:13px;
+    }
+    .custom-media-btn:hover{background:#c1073f;color:#fff;text-decoration:none}
+    .btn-edit-small{padding:4px 10px;font-size:12px;border-radius:14px}
+</style>
+
+<div id="media" class="tab">
+    <div class="row">
+
+        <!-- Başlık + EKLE butonları -->
+        <div class="rv-hd mb-3 d-flex justify-content-between align-items-center">
+            <div>
+                <h3>Video ve Fotoğraflar</h3>
+                <h2>@Model.Title</h2>
+            </div>
+
+            <!-- >>>  E K L E   B U T O N L A R I  <<< -->
+            <div class="d-flex gap-2">
+
+                <!-- Video Ekle -->
+                <a href="@Url.Action("AddVideo","Movie",
+                                    new { movieId = Model.MovieId })"
+                   class="custom-media-btn">
+                    <i class="ion-ios-videocam"></i> Video Ekle
+                </a>
+
+                <!-- Fotoğraf Ekle → ilk medya Id’si gönderiliyor -->
+                @if (Model.Media.Any())
+                {
+                    <a href="@Url.Action("AddPhoto","Movie",
+                                        new { mediaId = Model.Media.First().Id,
+                                              movieId = Model.MovieId })"
+                       class="custom-media-btn">
+                        <i class="ion-image"></i> Fotoğraf Ekle
+                    </a>
+                }
+            </div>
+        </div>
+
+
+        <!-- ▾▾▾  VİDEOLAR  ▾▾▾ -->
+        <div class="title-hd-sm">
+            <h4>Videolar <span>(@Model.Media.Count)</span></h4>
+        </div>
+
+        <div class="mvsingle-item media-item">
+        @foreach (var media in Model.Media)
+        {
+            <div class="vd-item">
+                <div class="vd-it">
+                    <img class="vd-img" src="@media.VideoThumbnail" alt="@media.Title" />
+                    <a class="fancybox-media hvr-grow" href="@media.VideoUrl">
+                        <img src="~/Film-Review-Movie-Database/images/uploads/play-vd.png" alt="Play" />
+                    </a>
+                </div>
+
+                <div class="vd-infor mt-1">
+                    <h6 class="text-light mb-1">@media.Title</h6>
+                    <p class="time mb-1">@media.Duration</p>
+
+                    <!-- DÜZENLE -->
+                    <a href="@Url.Action("EditVideo","Movie",
+                                         new { id = media.Id, movieId = Model.MovieId })"
+                       class="custom-media-btn btn-edit-small">
+                        <i class="ion-ios-create"></i> Düzenle
+                    </a>
+
+                    <!-- SİL -->
+                    <form asp-controller="Movie" asp-action="DeleteVideo"
+                          method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@media.Id" />
+                        <input type="hidden" name="movieId" value="@Model.MovieId" />
+                        <button type="submit"
+                                class="custom-media-btn btn-edit-small ms-1"
+                                onclick="return confirm('Bu videoyu silmek istediğine emin misin?');">
+                            <i class="ion-trash-a"></i> Sil
+                        </button>
+                    </form>
+                </div>
+            </div>
+        }
+        </div>
+
+
+        <!-- ▾▾▾  FOTOĞRAFLAR  ▾▾▾ -->
+        <div class="title-hd-sm mt-4">
+            <h4>Fotoğraflar <span>(@Model.Media.Sum(m => m.Photos.Count))</span></h4>
+        </div>
+
+        <div class="mvsingle-item d-flex flex-wrap gap-3 photo-item">
+        @foreach (var media in Model.Media)
+        {
+            foreach (var photo in media.Photos)
+            {
+                <div style="width:200px">
+
+                    <!-- Fotoğraf -->
+                    <a class="img-lightbox" href="@photo.Url">
+                        <img src="@photo.Url" alt="Fotoğraf"
+                             style="width:200px;height:120px;object-fit:cover;border-radius:4px;">
+                    </a>
+
+                    <!-- Düzenle | Sil -->
+                    <div class="d-flex justify-content-center mt-2">
+
+                        <a asp-action="EditPhoto"
+                           asp-controller="Movie"
+                           asp-route-id="@photo.PhotoId"
+                           asp-route-movieId="@Model.MovieId"
+                           class="custom-media-btn btn-edit-small me-1">
+                            <i class="ion-ios-create"></i> Düzenle
+                        </a>
+
+                        <form asp-controller="Movie" asp-action="DeletePhoto" method="post">
+                            <input type="hidden" name="id" value="@photo.PhotoId" />
+                            <input type="hidden" name="movieId" value="@Model.MovieId" />
+                            <button type="submit"
+                                    class="custom-media-btn btn-edit-small"
+                                    onclick="return confirm('Bu fotoğrafı silmek istediğinize emin misiniz?');">
+                                <i class="ion-trash-a"></i> Sil
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            }
+        }
+        </div>
+
+    </div>
+</div>

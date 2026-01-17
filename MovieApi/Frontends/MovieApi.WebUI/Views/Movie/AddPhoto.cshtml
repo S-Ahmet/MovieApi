@@ -1,0 +1,131 @@
+﻿@model MovieApi.Application.Features.CQRSDesingPattern.Commands.MediaPhotoCommands.AddMediaPhotoCommand
+
+@{
+    Layout = "~/Views/UserWebUILayout/LayoutUI.cshtml";
+    ViewData["Title"] = "Fotoğraf Ekle";
+
+    var mediaId = (int)(ViewBag.MediaId ?? 0);
+    var movieId = (int)(ViewBag.MovieId ?? 0);
+}
+<style>
+    /* Tam ekran koyu overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 50, 0.8); /* koyu mavi‑siyah karışımı */
+        z-index: 1000;
+    }
+    /* Ortalanmış form kutusu */
+    .photo-add-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        max-width: 90%;
+        padding: 30px;
+        background-color: #112; /* koyu mavi */
+        border-radius: 12px;
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        z-index: 1001; /* overlay’ın üstünde */
+    }
+
+        .photo-add-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #DD003F;
+        }
+
+    .form-label {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .form-control {
+        background: #223;
+        color: #fff;
+        border: 1px solid #445;
+    }
+
+        .form-control:focus {
+            border-color: #DD003F;
+            box-shadow: 0 0 8px #DD003F;
+        }
+
+    .btn-danger {
+        width: 100%;
+        background: #DD003F;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-weight: 600;
+        transition: background .3s;
+    }
+
+        .btn-danger:hover {
+            background: #DD003F;
+        }
+
+    .btn-secondary {
+        width: 100%;
+        margin-top: 8px;
+        background: #666;
+        border: none;
+        border-radius: 20px;
+        padding: 8px;
+        color: #ddd;
+    }
+
+        .btn-secondary:hover {
+            background: #555;
+        }
+</style>
+
+<!-- koyu overlay -->
+<div class="overlay"></div>
+
+<div class="photo-add-container">
+    <h2>Fotoğraf Ekle</h2>
+
+    <form asp-controller="Movie" asp-action="AddPhoto"
+          method="post" class="needs-validation" novalidate>
+        <input type="hidden" name="MediaId" value="@mediaId" />
+        <input type="hidden" name="movieId" value="@movieId" />
+
+        <div class="mb-3">
+            <label asp-for="PhotoUrl" class="form-label">
+                Fotoğraf URL <span class="text-danger">*</span>
+            </label>
+            <input asp-for="PhotoUrl" class="form-control"
+                   placeholder="https://example.com/photo.jpg" required />
+            <div class="invalid-feedback">
+                Lütfen geçerli bir fotoğraf URL'si giriniz.
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Ekle</button>
+        <a asp-controller="Movie" asp-action="MovieDetail"
+           asp-route-id="@movieId" class="btn btn-secondary">
+            İptal
+        </a>
+    </form>
+</div>
+
+<script>
+    (() => {
+      'use strict';
+      document.querySelectorAll('.needs-validation').forEach(form => {
+        form.addEventListener('submit', e => {
+          if (!form.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+</script>

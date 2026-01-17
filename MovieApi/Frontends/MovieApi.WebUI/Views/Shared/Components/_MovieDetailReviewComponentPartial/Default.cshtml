@@ -1,0 +1,88 @@
+﻿@model MovieApi.Dto.Dtos.MovieDtos.ResultMovieDetailsDto
+
+<div id="reviews" class="tab review">
+	<div class="row">
+		<div class="rv-hd">
+			<div class="div">
+				<h3>Yorumlar</h3>
+				<h2>@Model.Title</h2>
+			</div>
+
+			<!-- Yorum Yaz Butonu -->
+			<a href="/Movie/AddReview?movieId=@Model.MovieId" class="redbtn">Yorum Yaz</a>
+		</div>
+
+		<!-- Yorum Sayısı ve Sıralama -->
+		<div class="topbar-filter">
+			<p>Toplamda <span>@Model.Reviews.Count Yorum</span> bulundu</p>
+			<label>Sıralamaya Göre:</label>
+			<select>
+				<option value="popularity">Popüleriteye göre azalan</option>
+				<option value="popularity">Popüleriteye göre artan</option>
+				<option value="rating">Puana göre azalan</option>
+				<option value="rating">Puana göre artan</option>
+				<option value="date">Çıkış yılına göre azalan</option>
+				<option value="date">Çıkış yılına göre artan</option>
+			</select>
+		</div>
+
+		<!-- Yorumlar -->
+		@if (Model.Reviews != null && Model.Reviews.Any())
+		{
+			foreach (var review in Model.Reviews)
+			{
+				<div class="mv-user-review-item">
+					<div class="user-infor">
+						<img src="/Film-Review-Movie-Database/images/uploads/userava1.jpg" alt="kullanıcı">
+						<div>
+							<h3>@(review.ReviewComment.Length > 40 ? review.ReviewComment.Substring(0, 40) + "..." : review.ReviewComment)</h3>
+							<div class="no-star">
+								@for (int i = 0; i < 10; i++)
+								{
+									if (i < review.UserRating)
+									{
+										<i class="ion-android-star"></i>
+									}
+									else
+									{
+										<i class="ion-android-star last"></i>
+									}
+								}
+							</div>
+							<p class="time">
+								@review.ReviewDate.ToString("dd MMMM yyyy") by <a href="#">@review.ReviewerName</a>
+							</p>
+						</div>
+					</div>
+					<p>@review.ReviewComment</p>
+
+					<!-- Sil Butonu -->
+					<form asp-controller="Movie" asp-action="DeleteReview" method="post" style="display:inline;">
+						<input type="hidden" name="id" value="@review.ReviewID" />
+						<input type="hidden" name="movieId" value="@Model.MovieId" />
+						<button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bu yorumu silmek istediğine emin misin?')">
+							Sil
+						</button>
+					</form>
+				</div>
+			}
+		}
+		else
+		{
+			<p>Henüz yorum yapılmamış.</p>
+		}
+
+		<!-- Sayfalama -->
+		<div class="topbar-filter">
+			<label>Sayfaya göre yorumlar:</label>
+			<select>
+				<option value="range">5 Yorum</option>
+				<option value="saab">10 Yorum</option>
+			</select>
+			<div class="pagination2">
+				<span>Sayfa 1 - 1:</span>
+				<a class="active" href="#">1</a>
+			</div>
+		</div>
+	</div>
+</div>

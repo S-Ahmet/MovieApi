@@ -1,0 +1,132 @@
+﻿@model MovieApi.Dto.Dtos.MovieDtos.ResultMovieDetailsDto
+
+<div id="overview" class="tab active">
+	<div class="row">
+		<div class="col-md-8 col-sm-12 col-xs-12">
+			<p>@Model.Description</p>
+
+			<!-- Video & Fotoğraf -->
+			<div class="title-hd-sm d-flex justify-content-between align-items-center">
+				<h4>VIDEOS & PHOTOS</h4>
+				<a href="#media" class="time">
+					@Model.Media.Count Video &amp; @Model.Media.Sum(m => m.Photos.Count) Fotoğraf
+					<i class="ion-ios-arrow-right"></i>
+				</a>
+			</div>
+			<div class="row mb-3">
+				@foreach (var media in Model.Media.Take(3))
+				{
+					foreach (var photo in media.Photos.Take(1))
+					{
+						<div class="col-auto" style="margin-right: 10px;">
+							<a class="img-lightbox" href="@photo.Url">
+								<img src="@photo.Url" alt="fotoğraf"
+									 style="width:100px; height:70px; object-fit:cover; border-radius:4px;" />
+							</a>
+						</div>
+					}
+				}
+
+				@if (Model.Media.Any())
+				{
+					var video = Model.Media.First();
+					<div class="col-auto" style="position: relative; width:100px; height:70px; margin-right:10px;">
+						<img src="@video.VideoThumbnail" alt="video"
+							 style="width:100px; height:70px; object-fit:cover; border-radius:4px;" />
+						<a href="@video.VideoUrl" class="fancybox-media"
+						   style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);">
+							<img src="~/Film-Review-Movie-Database/images/uploads/play-vd.png"
+								 alt="Play" style="width:24px; height:24px;" />
+						</a>
+					</div>
+				}
+			</div>
+
+			<!-- Oyuncular -->
+			<div class="title-hd-sm d-flex justify-content-between align-items-center">
+				<h4>CAST</h4>
+				<a href="#cast" class="time">Full Cast &amp; Crew <i class="ion-ios-arrow-right"></i></a>
+			</div>
+			<div class="mvcast-item">
+				@foreach (var cast in Model.Casts.Take(7))
+				{
+					<div class="cast-it d-flex align-items-center mb-2">
+						<div class="cast-left d-flex align-items-center">
+							<img src="@cast.ImageUrl" alt="cast"
+								 style="width:40px; height:40px; object-fit:cover; border-radius:50%; margin-right:10px;" />
+							<a href="#">@cast.Name @cast.Surname</a>
+						</div>
+						<p class="ms-2">... @cast.Role</p>
+					</div>
+				}
+			</div>
+
+			<!-- Yorum -->
+			<div class="title-hd-sm">
+				<h4>Kullanıcı Yorumları</h4>
+				<a href="#" class="time">Tüm Yorumları Gör (@Model.ReviewCount) <i class="ion-ios-arrow-right"></i></a>
+			</div>
+			@if (Model.Reviews.Any())
+			{
+				var review = Model.Reviews.OrderByDescending(x => x.ReviewDate).First();
+				<div class="mv-user-review-item">
+					<h3>Yapılan Son Değerlendirme</h3>
+					<div class="no-star">
+						@for (int i = 0; i < review.StarCount; i++)
+						{
+							<i class="ion-android-star"></i>
+						}
+						@for (int i = review.StarCount; i < 10; i++)
+						{
+							<i class="ion-android-star-outline"></i>
+						}
+					</div>
+					<p class="time">
+						@review.ReviewDate.ToString("dd MMMM yyyy") <a href="#">@review.ReviewerName</a>
+					</p>
+					<p>@review.ReviewComment</p>
+				</div>
+			}
+		</div>
+
+		<!-- Sağ taraf bilgiler -->
+		<div class="col-md-4 col-xs-12 col-sm-12">
+			<div class="sb-it">
+				<h6>Yönetmen:</h6>
+				<p><a href="#">@Model.Director</a></p>
+			</div>
+			<div class="sb-it">
+				<h6>Senarist:</h6>
+				<p>@Model.Writers</p>
+			</div>
+			<div class="sb-it">
+				<h6>Oyuncular:</h6>
+				<p>
+					@foreach (var cast in Model.Casts.Take(4))
+					{
+						<a href="#">@cast.Name @cast.Surname</a>
+						@(cast != Model.Casts.Take(4).Last() ? ", " : "")
+					}
+				</p>
+			</div>
+			<div class="sb-it">
+				<h6>Tür/Kategori:</h6>
+				<p>
+					@foreach (var category in Model.Categories ?? new List<string>())
+					{
+						<a href="#">@category</a>
+						@(category != Model.Categories.Last() ? ", " : "")
+					}
+				</p>
+			</div>
+			<div class="sb-it">
+				<h6>Çıkış Tarihi:</h6>
+				<p>@Model.ReleaseDate.ToString("dd.MM.yyyy")</p>
+			</div>
+			<div class="sb-it">
+				<h6>Süresi:</h6>
+				<p>@Model.Duration min</p>
+			</div>
+		</div>
+	</div>
+</div>

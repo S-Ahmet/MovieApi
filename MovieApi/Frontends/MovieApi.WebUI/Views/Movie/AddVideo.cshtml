@@ -1,0 +1,142 @@
+﻿@{
+    Layout = "~/Views/UserWebUILayout/LayoutUI.cshtml";
+    ViewData["Title"] = "Video Ekle";
+
+    // Controller‑daki ViewBag.MovieId değerini alıyoruz
+    var movieId = (int)ViewBag.MovieId;
+}
+
+<!-- ▼────────  STİL  ────────▼ -->
+<style>
+    /* Koyu arka plan */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,50,.8);
+        z-index: 1000;
+    }
+    /* Ortadaki kutu */
+    .video-add-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 430px;
+        max-width: 92%;
+        padding: 32px;
+        background: #112;
+        border-radius: 12px;
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0,0,0,.7);
+        z-index: 1001;
+    }
+
+        .video-add-container h2 {
+            margin-bottom: 22px;
+            text-align: center;
+            color: #DD003F;
+            font-weight: 700
+        }
+
+    .form-label {
+        color: #fff;
+        font-weight: 600
+    }
+
+    .form-control {
+        background: #223;
+        color: #fff;
+        border: 1px solid #445
+    }
+
+        .form-control:focus {
+            border-color: #DD003F;
+            box-shadow: 0 0 8px #DD003F
+        }
+
+    .btn-danger {
+        width: 100%;
+        background: #DD003F;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-weight: 600;
+        transition: background .3s
+    }
+
+        .btn-danger:hover {
+            background: #DD003F
+        }
+
+    .btn-secondary {
+        width: 100%;
+        margin-top: 8px;
+        background: #666;
+        border: none;
+        border-radius: 20px;
+        padding: 8px;
+        color: #ddd
+    }
+
+        .btn-secondary:hover {
+            background: #555
+        }
+</style>
+<!-- ▲────────  STİL  ────────▲ -->
+
+<div class="overlay"></div>
+
+<div class="video-add-container">
+    <h2>Video Ekle</h2>
+
+    <!-- Form, MovieController.AddVideo aksiyonuna post atar -->
+    <form asp-action="AddVideo"
+          asp-controller="Movie"
+          method="post"
+          class="needs-validation"
+          novalidate>
+
+        @Html.AntiForgeryToken()
+
+        <!-- Film kimliği gizli gönderiliyor -->
+        <input type="hidden" name="MovieId" value="@movieId" />
+
+        <div class="mb-3">
+            <label class="form-label">Video URL <span class="text-danger">*</span></label>
+            <input name="VideoUrl"
+                   class="form-control"
+                   type="url"
+                   placeholder="https://youtube.com/watch?v=..."
+                   required />
+            <div class="invalid-feedback">Lütfen geçerli bir URL girin.</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Thumbnail URL</label>
+            <input name="VideoThumbnail"
+                   class="form-control"
+                   type="url"
+                   placeholder="https://example.com/thumb.jpg" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Başlık</label>
+            <input name="Title"
+                   class="form-control"
+                   placeholder="Fragman" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Süre (mm:ss)</label>
+            <input name="Duration"
+                   class="form-control"
+                   placeholder="02:15" />
+        </div>
+
+        <button type="submit" class="btn btn-danger">Ekle</button>
+        <a asp-action="MovieDetail"
+           asp-route-id="@movieId"
+           class="btn btn-secondary">İptal</a>
+    </form>
+</div>
+

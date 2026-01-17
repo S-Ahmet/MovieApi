@@ -1,0 +1,123 @@
+﻿@model MovieApi.Dto.Dtos.MovieDtos.ResultPhotoDto
+@{
+    Layout = "~/Views/UserWebUILayout/LayoutUI.cshtml";
+    ViewData["Title"] = "Video Düzenle";
+}
+@{
+    var movieId = (int)ViewBag.MovieId;
+}
+
+<!-- Koyu arka plan -->
+<div class="overlay"></div>
+
+<style>
+    /* Ortalanmış kutu */
+    .video-edit-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 430px;
+        max-width: 92%;
+        padding: 32px;
+        background: #112;
+        border-radius: 12px;
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0,0,0,.7);
+        z-index: 1001;
+    }
+
+        .video-edit-container h2 {
+            margin-bottom: 22px;
+            text-align: center;
+            color: #DD003F;
+            font-weight: 700;
+        }
+
+    .form-label {
+        color: #fff;
+        font-weight: 600
+    }
+
+    .form-control {
+        background: #223;
+        color: #fff;
+        border: 1px solid #445
+    }
+
+        .form-control:focus {
+            border-color: #DD003F;
+            box-shadow: 0 0 8px #DD003F
+        }
+
+    .btn-primary {
+        width: 100%;
+        background: #DD003F;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-weight: 600;
+        transition: background .3s;
+    }
+
+        .btn-primary:hover {
+            background: #DD003F
+        }
+
+    .btn-secondary {
+        width: 100%;
+        margin-top: 8px;
+        background: #666;
+        border: none;
+        border-radius: 20px;
+        padding: 8px;
+        color: #ddd;
+    }
+
+        .btn-secondary:hover {
+            background: #555
+        }
+</style>
+
+<div class="video-edit-container">
+    <h2>Fotoğraf Güncelle</h2>
+    <form asp-controller="Movie" asp-action="EditPhoto"
+          method="post" class="needs-validation" novalidate>
+        @Html.AntiForgeryToken() <!-- anti-forgery token -->
+
+        <input type="hidden" asp-for="PhotoId" />
+        <input type="hidden" asp-for="MediaId" />
+        <input type="hidden" name="movieId" value="@movieId" />
+
+        <div class="mb-3">
+            <label class="form-label">Fotoğraf URL</label>
+            <input asp-for="Url"
+                   class="form-control"
+                   type="url"
+                   placeholder="https://example.com/photo.jpg"
+                   required />
+            <div class="invalid-feedback">Geçerli URL giriniz</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+        <a asp-action="MovieDetail"
+           asp-route-id="@movieId"
+           class="btn btn-secondary">İptal</a>
+    </form>
+</div>
+
+<!-- Basit JS doğrulaması -->
+<script>
+    (() => {
+      'use strict';
+      document.querySelectorAll('.needs-validation').forEach(f=>{
+        f.addEventListener('submit', e=>{
+          if(!f.checkValidity()){
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          f.classList.add('was-validated');
+        }, false);
+      });
+    })();
+</script>

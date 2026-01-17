@@ -1,0 +1,177 @@
+﻿<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+			<!-- Brand -->
+			<div class="navbar-header logo">
+				<div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<div id="nav-icon1">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<a href="/Movie/MovieList">
+					<img class="logo" src="/Film-Review-Movie-Database/images/logo1.png" alt="Blockbuster Logo" width="119" height="58">
+				</a>
+			</div>
+
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav flex-child-menu menu-left">
+					<li class="hidden"><a href="#page-top"></a></li>
+
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" href="/">ANA SAYFA</a>
+					</li>
+
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							FİLMLER <i class="fa fa-angle-down" aria-hidden="true"></i>
+						</a>
+						<ul class="dropdown-menu level1">
+							<li><a href="/Movie/MovieList">Tüm Filmler</a></li>
+							<li><a href="/Movie/MovieList?sortBy=rating&desc=true">En Yüksek Reyting</a></li>
+							<li><a href="/Movie/MovieList?sortBy=date&desc=true">Yeni Çıkanlar</a></li>
+							<li><a href="/Movie/MovieList?sortBy=title&desc=false">Alfabetik (A→Z)</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" href="/Series/SeriesList">DİZİLER</a>
+					</li>
+
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" href="/Documentary/DocumentaryList">BELGESELLER</a>
+					</li>
+
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" href="/Other/OtherList">DİĞER</a>
+					</li>
+
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" href="/Blog/BlogList">BLOG</a>
+					</li>
+
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" href="/Review/ReviewList">YORUMLAR</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav flex-child-menu menu-right">
+					<li class="dropdown first">
+						<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							SAYFALAR <i class="fa fa-angle-down" aria-hidden="true"></i>
+						</a>
+						<ul class="dropdown-menu level1">
+							<li><a href="/Cast/CastList">Oyuncular</a></li>
+							<li><a href="/Movie/MovieList?sortBy=date&desc=true">Yeni Çıkanlar</a></li>
+							<li><a href="/Movie/MovieList?sortBy=date&desc=false">Yakında Gelecekler</a></li>
+							<li><a href="/Other/OtherList">Diğer</a></li>
+						</ul>
+					</li>
+					<li><a href="/Support/Index">DESTEK</a></li>
+					<li class="loginLink"><a href="/Account/Login">GİRİŞ YAP</a></li>
+					<li class="btn signupLink"><a href="/Account/Register">KAYIT OL</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- 🔍 Geniş yatay arama çubuğu -->
+		<style>
+			.top-search {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #0b1a2a;
+				padding: 10px 0;
+			}
+
+				.top-search form {
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					width: 60%;
+					max-width: 800px;
+					background: #13233a;
+					border-radius: 6px;
+					padding: 6px 10px;
+				}
+
+				.top-search select {
+					background-color: #09121e;
+					color: white;
+					border: none;
+					padding: 8px 12px;
+					border-radius: 4px;
+					outline: none;
+					font-size: 14px;
+				}
+
+				.top-search input[type="text"] {
+					flex: 1;
+					background-color: transparent;
+					border: none;
+					color: white;
+					font-size: 14px;
+					outline: none;
+					padding: 8px;
+				}
+
+				.top-search button {
+					background-color: #DD003F;
+					border: none;
+					color: white;
+					padding: 8px 12px;
+					border-radius: 4px;
+					cursor: pointer;
+					transition: 0.3s;
+				}
+
+					.top-search button:hover {
+						background-color: #DD003F;
+					}
+
+			/* 🔴 Giriş Yap kırmızı, Kayıt Ol beyaz */
+			.ht-header .loginLink a {
+				background-color: #DD003F !important;
+				color: #fff !important;
+				padding: 6px 15px !important;
+				border-radius: 20px !important;
+				font-weight: 600;
+				transition: all 0.3s ease;
+			}
+
+				.ht-header .loginLink a:hover {
+					background-color: #DD003F !important;
+				}
+
+			.ht-header .signupLink a {
+				border: 2px solid #fff !important;
+				color: #fff !important;
+				padding: 6px 15px !important;
+				border-radius: 20px !important;
+				font-weight: 600;
+				transition: all 0.3s ease;
+			}
+
+				.ht-header .signupLink a:hover {
+					background-color: #fff !important;
+					color: #000 !important;
+				}
+		</style>
+
+		<div class="top-search">
+			<form method="get" action="/Movie/MovieList">
+				<select name="category">
+					<option value="movie">Filmler</option>
+					<option value="series">Diziler</option>
+					<option value="documentary">Belgeseller</option>
+					<option value="other">Diğer</option>
+				</select>
+				<input type="text" name="query" placeholder="Aranacak Film, Dizi, Belgesel vs.">
+				<button type="submit"><i class="ion-search"></i></button>
+			</form>
+		</div>
+	</div>
+</header>

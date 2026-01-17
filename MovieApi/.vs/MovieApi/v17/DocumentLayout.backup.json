@@ -1,0 +1,246 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\movie\\movielist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\movie\\movielist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\shared\\components\\_userlayoutwebuinavbarcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\shared\\components\\_userlayoutwebuinavbarcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\userwebuilayout\\layoutui.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\userwebuilayout\\layoutui.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\movie\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\movie\\moviedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\documentary\\documentarylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\documentary\\documentarylist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\views\\series\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\views\\series\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\frontends\\movieapi.webui\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2525B93C-CA67-4BBA-B4BC-1C4DEC146477}|Frontends\\MovieApi.WebUI\\MovieApi.WebUI.csproj|solutionrelative:frontends\\movieapi.webui\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CECB72C-92D0-471B-BB67-6D199F3841F4}|Presentation\\MovieApi.WebApi\\MovieApi.WebApi.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\presentation\\movieapi.webapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CECB72C-92D0-471B-BB67-6D199F3841F4}|Presentation\\MovieApi.WebApi\\MovieApi.WebApi.csproj|solutionrelative:presentation\\movieapi.webapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CECB72C-92D0-471B-BB67-6D199F3841F4}|Presentation\\MovieApi.WebApi\\MovieApi.WebApi.csproj|c:\\users\\sadik\\desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\movieapi\\presentation\\movieapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CECB72C-92D0-471B-BB67-6D199F3841F4}|Presentation\\MovieApi.WebApi\\MovieApi.WebApi.csproj|solutionrelative:presentation\\movieapi.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MovieList.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieList.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieList.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieList.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieList.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-27T21:56:44.28Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\Components\\_UserLayoutWebUINavbarComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Shared\\Components\\_UserLayoutWebUINavbarComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\Components\\_UserLayoutWebUINavbarComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Shared\\Components\\_UserLayoutWebUINavbarComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAHwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:36:44.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LayoutUI.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\UserWebUILayout\\LayoutUI.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\UserWebUILayout\\LayoutUI.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\UserWebUILayout\\LayoutUI.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\UserWebUILayout\\LayoutUI.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:35:46.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovieDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieDetail.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieDetail.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieDetail.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Movie\\MovieDetail.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-23T20:15:45.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:35:40.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:35:39.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:34:38.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:34:35.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:34:10.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DocumentaryList.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Documentary\\DocumentaryList.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Documentary\\DocumentaryList.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Documentary\\DocumentaryList.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Documentary\\DocumentaryList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:33:03.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "View.cshtml",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Series\\View.cshtml",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Views\\Series\\View.cshtml",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Views\\Series\\View.cshtml",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Views\\Series\\View.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T17:30:59.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Presentation\\MovieApi.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\MovieApi.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Presentation\\MovieApi.WebApi\\Program.cs",
+              "RelativeToolTip": "Presentation\\MovieApi.WebApi\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T14:46:56.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Presentation\\MovieApi.WebApi\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "Presentation\\MovieApi.WebApi\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Presentation\\MovieApi.WebApi\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "Presentation\\MovieApi.WebApi\\Controllers\\MoviesController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T14:37:02.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Frontends\\MovieApi.WebUI\\Controllers\\MovieController.cs",
+              "ToolTip": "C:\\Users\\sadik\\Desktop\\ger\u00E7ek son\\ger\u00E7ek son\\ger\u00E7ek son\\MovieApi\\Frontends\\MovieApi.WebUI\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Frontends\\MovieApi.WebUI\\Controllers\\MovieController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAgwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T22:03:15.59Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

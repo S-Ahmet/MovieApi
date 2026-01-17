@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MovieApi.Application\MovieApi.Application.csproj" />
+    <ProjectReference Include="..\..\Core\MovieApi.Domain\MovieApi.Domain.csproj" />
+    <ProjectReference Include="..\MovieApi.Dto\MovieApi.Dto.csproj" />
+  </ItemGroup>
+
+</Project>

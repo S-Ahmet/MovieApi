@@ -1,0 +1,136 @@
+﻿@model MovieApi.Dto.Dtos.MovieDtos.ResultMediaDto
+
+@{
+    Layout = "~/Views/UserWebUILayout/LayoutUI.cshtml";
+    ViewData["Title"] = "Video Düzenle";
+}
+
+<style>
+    /* Koyu arka plan */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,50,.8);
+        z-index: 1000;
+    }
+    /* Ortalanmış kutu */
+    .video-edit-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 430px;
+        max-width: 92%;
+        padding: 32px;
+        background: #112;
+        border-radius: 12px;
+        color: #fff;
+        box-shadow: 0 0 20px rgba(0,0,0,.7);
+        z-index: 1001;
+    }
+
+        .video-edit-container h2 {
+            margin-bottom: 22px;
+            text-align: center;
+            color: #DD003F;
+            font-weight: 700;
+        }
+
+    .form-label {
+        color: #fff;
+        font-weight: 600
+    }
+
+    .form-control {
+        background: #223;
+        color: #fff;
+        border: 1px solid #445
+    }
+
+        .form-control:focus {
+            border-color: #DD003F;
+            box-shadow: 0 0 8px #DD003F
+        }
+
+    .btn-primary {
+        width: 100%;
+        background: #DD003F;
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-weight: 600;
+        transition: background .3s;
+    }
+
+        .btn-primary:hover {
+            background: #DD003F
+        }
+
+    .btn-secondary {
+        width: 100%;
+        margin-top: 8px;
+        background: #666;
+        border: none;
+        border-radius: 20px;
+        padding: 8px;
+        color: #ddd;
+    }
+
+        .btn-secondary:hover {
+            background: #555
+        }
+</style>
+
+<div class="overlay"></div>
+
+<div class="video-edit-container">
+    <h2>@Model.Title – Video Düzenle</h2>
+
+    <form asp-controller="Movie" asp-action="EditVideo"
+          method="post" class="needs-validation" novalidate>
+        <input type="hidden" asp-for="Id" />   <!-- Video ID -->
+        <input type="hidden" asp-for="MovieId" />   <!-- Film ID -->
+
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label">Video Başlığı</label>
+            <input asp-for="Title" class="form-control" required />
+            <div class="invalid-feedback">Lütfen video başlığını giriniz.</div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="VideoUrl" class="form-label">Video URL</label>
+            <input asp-for="VideoUrl" class="form-control" type="url" required />
+            <div class="invalid-feedback">Lütfen geçerli bir URL giriniz.</div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="VideoThumbnail" class="form-label">Thumbnail URL</label>
+            <input asp-for="VideoThumbnail" class="form-control" type="url" required />
+            <div class="invalid-feedback">Lütfen geçerli bir URL giriniz.</div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Duration" class="form-label">Süre (mm:ss)</label>
+            <input asp-for="Duration" class="form-control" required />
+            <div class="invalid-feedback">Lütfen süre bilgisini giriniz.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        <a asp-controller="Movie" asp-action="MovieDetail"
+           asp-route-id="@Model.MovieId"
+           class="btn btn-secondary">İptal</a>
+    </form>
+</div>
+
+<!-- Inline doğrulama script’i -->
+<script>
+    (() => {
+      'use strict';
+      document.querySelectorAll('.needs-validation').forEach(f=>{
+        f.addEventListener('submit',e=>{
+          if(!f.checkValidity()){e.preventDefault();e.stopPropagation();}
+          f.classList.add('was-validated');
+        },false);
+      });
+    })();
+</script>

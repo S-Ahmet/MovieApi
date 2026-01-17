@@ -1,0 +1,205 @@
+﻿@model List<MovieApi.Dto.Dtos.MovieDtos.ResultMovieDto>
+
+@{
+    ViewData["Title"] = "MovieGrid";
+    Layout = "~/Views/UserWebUILayout/LayoutUI.cshtml";
+}
+
+<div class="page-single movie_list">
+    <div class="container">
+        <div class="row ipad-width2">
+
+            <!-- Sol: Grid film listesi -->
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="topbar-filter">
+                    <p>
+                        Toplam <span>@ViewBag.TotalMovies Film Mevcut</span> —
+                        Sayfa <span>@ViewBag.CurrentPage / @ViewBag.TotalPages</span>
+                    </p>
+
+                    <label>Sıralama:</label>
+                    <select onchange="location.href='@Url.Action("MovieGrid")?page=1&pageSize=@ViewBag.PageSize&sortBy=' + this.value">
+                        <option value="rating" @(ViewBag.SortBy == "rating" ? "selected" : "")>Reytinge göre azalan</option>
+                        <option value="title" @(ViewBag.SortBy == "title" ? "selected" : "")>İsme göre</option>
+                        <option value="date" @(ViewBag.SortBy == "date" ? "selected" : "")>Çıkış yılına göre</option>
+                    </select>
+
+                    <a href="/Movie/MovieList" class="list"><i class="ion-ios-list-outline"></i></a>
+                    <a href="/Movie/MovieGrid" class="grid"><i class="ion-grid active"></i></a>
+                </div>
+
+                <!-- 🎞️ Filmler Grid halinde -->
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+                            <div class="movie-item-style-2 text-center">
+                                <img src="@item.CoverImageUrl" alt="@item.Title" class="img-responsive">
+                                <div class="mv-item-infor mt-2">
+                                    <h6>
+                                        <a href="/Movie/MovieDetail/@item.MovieId">@item.Title</a>
+                                        <span> (@item.CreatedYear)</span>
+                                    </h6>
+                                    <p class="rate">
+                                        <i class="ion-android-star"></i>
+                                        <span>@item.Rating</span> /10
+                                    </p>
+                                    <a href="/Movie/MovieDetail/@item.MovieId" class="btn btn-sm btn-danger mt-2">Detayları Gör</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- 🎯 Sayfa boyutu ve pagination -->
+                <div class="topbar-filter">
+                    <label>Sayfaya Göre Filmler:</label>
+                    @removeTagHelper "Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper, Microsoft.AspNetCore.Mvc.TagHelpers"
+
+                    <select onchange="location.href='@Url.Action("MovieGrid")?page=1&pageSize=' + this.value + '&sortBy=@ViewBag.SortBy'">
+                        <option value="5" @(ViewBag.PageSize == 5 ? "selected" : "")>5 Film</option>
+                        <option value="10" @(ViewBag.PageSize == 10 ? "selected" : "")>10 Film</option>
+                        <option value="20" @(ViewBag.PageSize == 20 ? "selected" : "")>20 Film</option>
+                    </select>
+
+                    <div class="pagination2 text-center mt-4">
+                        @if ((int)ViewBag.CurrentPage > 1)
+                        {
+                            <a href="@Url.Action("MovieGrid", new { page = (int)ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize, sortBy = ViewBag.SortBy })" class="btn btn-dark me-2">⟵ Önceki</a>
+                        }
+
+                        <span>Sayfa @ViewBag.CurrentPage / @ViewBag.TotalPages</span>
+
+                        @if ((int)ViewBag.CurrentPage < (int)ViewBag.TotalPages)
+                        {
+                            <a href="@Url.Action("MovieGrid", new { page = (int)ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize, sortBy = ViewBag.SortBy })" class="btn btn-dark ms-2">Sonraki ⟶</a>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ: Sidebar (Arama paneli) -->
+            <style>
+                .submit {
+                    background-color: #e50914 !important;
+                    color: white !important;
+                    border: none !important;
+                    padding: 10px 20px;
+                    font-weight: 600;
+                    border-radius: 6px;
+                    transition: all 0.3s ease;
+                }
+
+                    .submit:hover {
+                        background-color: #e50914 !important;
+                        color: #fff !important;
+                    }
+            </style>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <div class="searh-form">
+                        <h4 class="sb-title">Arayacağınız Film</h4>
+
+                        <form class="form-style-1" method="get" asp-action="MovieList">
+                            <div class="row">
+                                <!-- 🎬 Film adı -->
+                                <div class="col-md-12 form-it">
+                                    <label>Film Adı</label>
+                                    <input type="text" name="searchTitle" placeholder="Aranacak Film" value="@ViewBag.SearchTitle">
+                                </div>
+
+                                <!-- 🎭 Tür seçimi -->
+                                <div class="col-md-12 form-it">
+                                    <label>Türler</label>
+                                    <div class="group-ip">
+                                        <select name="genre" class="ui fluid dropdown">
+                                            <option value="">Film Türü Seçiniz</option>
+                                            <option value="Aksiyon" @(ViewBag.Genre == "Aksiyon" ? "selected" : "")>Aksiyon</option>
+                                            <option value="Korku" @(ViewBag.Genre == "Korku" ? "selected" : "")>Korku</option>
+                                            <option value="Komedi" @(ViewBag.Genre == "Komedi" ? "selected" : "")>Komedi</option>
+                                            <option value="Dram" @(ViewBag.Genre == "Dram" ? "selected" : "")>Dram</option>
+                                            <option value="Romantik" @(ViewBag.Genre == "Romantik" ? "selected" : "")>Romantik</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- ⭐ Reyting aralığı -->
+                                <div class="col-md-12 form-it">
+                                    <label>Reyting Aralığı</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select name="minRating">
+                                                <option value="0" @(ViewBag.MinRating == 0 ? "selected" : "")>Min</option>
+                                                <option value="3" @(ViewBag.MinRating == 3 ? "selected" : "")>3+</option>
+                                                <option value="5" @(ViewBag.MinRating == 5 ? "selected" : "")>5+</option>
+                                                <option value="7" @(ViewBag.MinRating == 7 ? "selected" : "")>7+</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select name="maxRating">
+                                                <option value="10" @(ViewBag.MaxRating == 10 ? "selected" : "")>10</option>
+                                                <option value="9" @(ViewBag.MaxRating == 9 ? "selected" : "")>9</option>
+                                                <option value="8" @(ViewBag.MaxRating == 8 ? "selected" : "")>8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 📅 Yıl aralığı -->
+                                <div class="col-md-12 form-it">
+                                    <label>Çıkış Yılı</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select name="yearFrom">
+                                                <option value="">Başlangıç</option>
+                                                @for (int y = 1990; y <= DateTime.Now.Year; y += 5)
+                                                {
+                                                    <option value="@y" @(ViewBag.YearFrom == y ? "selected" : "")>@y</option>
+                                                }
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select name="yearTo">
+                                                <option value="">Bitiş</option>
+                                                @for (int y = 1995; y <= DateTime.Now.Year + 5; y += 5)
+                                                {
+                                                    <option value="@y" @(ViewBag.YearTo == y ? "selected" : "")>@y</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mt-3">
+                                    <button type="submit" class="submit">Film Ara</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div class="ads">
+                        <img src="/Film-Review-Movie-Database/images/uploads/ads1.png" alt="">
+                    </div>
+
+                    <div class="sb-facebook sb-it">
+                        <h4 class="sb-title">Facebook Üzerinden Bize Ulaşın</h4>
+                        <iframe src="#" data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftemplatespoint.net%2F%3Ffref%3Dts&tabs=timeline&width=340&height=315px&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
+                                height="315" style="width:100%;border:none;overflow:hidden"></iframe>
+                    </div>
+
+                    <div class="sb-twitter sb-it">
+                        <h4 class="sb-title">Tweet to us</h4>
+                        <div class="slick-tw">
+                            <div class="tweet item" id="">
+                                <!-- Twitter bağlantısı -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

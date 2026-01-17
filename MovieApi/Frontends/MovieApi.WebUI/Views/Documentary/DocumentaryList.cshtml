@@ -1,0 +1,25 @@
+﻿@model List<MovieApi.Dto.Dtos.MovieDtos.ResultMovieDto>
+@{
+    ViewData["Title"] = "Dizi Listesi";
+    Layout = "~/Views/UserWebUILayout/LayoutUI.cshtml";
+}
+
+<div class="page-single movie_list">
+    <div class="container">
+        <h2 class="text-white">Tüm Diziler</h2>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="movie-item-style-2">
+                        <img src="@item.CoverImageUrl" alt="">
+                        <div class="mv-item-infor">
+                            <h6><a href="/Movie/MovieDetail/@item.MovieId">@item.Title</a></h6>
+                            <p class="rate"><i class="ion-android-star"></i><span>@item.Rating</span>/10</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
